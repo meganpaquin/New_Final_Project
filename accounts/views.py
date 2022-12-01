@@ -14,3 +14,4 @@ class UserChangeView(UpdateView):
     template_name = 'registration/change_user.html'
     form_class = CustomUserChangeForm
     model = CustomUser
+    success_url = reverse_lazy("home")

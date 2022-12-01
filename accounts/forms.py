@@ -19,4 +19,4 @@ class CustomUserChangeForm(UserChangeForm):
         widgets = {
             'color': TextInput(attrs={'type': 'color'}),
         }
-        success_url = reverse_lazy("home")
+        

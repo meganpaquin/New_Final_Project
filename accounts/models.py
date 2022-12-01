@@ -19,7 +19,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=128)
     last_name = models.CharField(max_length=128)
     phone = models.CharField(max_length=9, null=True)
-    image = models.ImageField(upload_to='img', default='static/img/FSDI_Final_Logo.svg')
+    image = models.ImageField(upload_to='images/')
 
     
     objects = CustomUserManager()
