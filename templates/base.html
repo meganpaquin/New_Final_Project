@@ -74,13 +74,14 @@
 
                 <div class="row-container nav-group flex-end">
                     <i class="fa-solid fa-gear fa-lg"></i>
-                    <h4><a href="#">Settings</a></h4>
+                    <h4><a href="{% url 'change_user' user.id %}">Settings</a></h4>
                 </div>
             </div>
         </div>
         
         <div class="column-container column">
             <div class="row-container top-nav">
+                
                 <div class="photo"><i class="fa-solid fa-user fa-lg"></i></div>
                 <div class="name-group">
                     {% if user.is_authenticated %}
