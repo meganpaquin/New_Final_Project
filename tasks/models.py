@@ -61,25 +61,3 @@ class Task(models.Model):
 
     def get_absolute_url(self):
         return reverse('task-detail', args=[self.id])
-
-
-class Risk(models.Model):
-    task = models.ForeignKey(
-        Task,
-        on_delete=models.CASCADE,
-        related_name="comments"
-    )
-    user = models.ForeignKey(
-       get_user_model(),
-        on_delete=models.CASCADE,
-        related_name="commenter"
-    )
-    comment = models.TextField(max_length=500)
-    created_on = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=True)
-
-    class Meta:
-        ordering = ['created_on']
-
-    def __str__(self):
-        return self.comment

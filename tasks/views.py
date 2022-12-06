@@ -14,6 +14,10 @@ class TaskDetailView(DetailView):
     template_name = "tasks/task-detail.html"
     model = Task
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
 class TaskCreateView(LoginRequiredMixin, CreateView):
     template_name = "tasks/task-new.html"
     model = Task
